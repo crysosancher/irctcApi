@@ -86,6 +86,7 @@ app.get("/station-details", async (req, res) => {
         throw Error(`Some Error in fetching data from IRCTC: ${err} `);
       });
   } catch (err) {
+		console.log(err)
     res.json({ error: err });
   }
   //  await res.json(`${k}`)
