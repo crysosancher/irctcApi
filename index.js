@@ -7,6 +7,9 @@ const cors = require('cors');
 app.use(cors({
     origin: '*'
 }));
+app.get('/', (req, res) => {
+	res.send('Hello World!')
+})
 
 app.get('/station-details',async (req, res) => {
   const [ from, tempTo, tempDate ] = req.query.fromStation.replaceAll(`'`,'').split('?');
