@@ -19,10 +19,7 @@ app.get('/station-details',async (req, res) => {
   
   // res.json({check:1234})
  //let k= await res.json(`${price()}`)
- await price(from,to,date).then(data=>{
-   console.log(data);
-   res.json(data);
- }).catch( err =>{ throw Error( `Some Error in fetching data from IRCTC: ${err} `) })
+
 //  await res.json(`${k}`)
 })
 app.get('/train',async (req, res) => {
