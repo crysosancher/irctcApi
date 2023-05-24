@@ -68,9 +68,11 @@ app.get("/train", async (req, res) => {
 });
 app.get("/station-details", async (req, res) => {
   try {
+		console.log(res.query.fromStation)
     const [from, tempTo, tempDate] = req.query.fromStation
       .replaceAll(`'`, "")
       .split("?");
+			
     const to = tempTo.split("=")[1];
     const date = tempDate.split("=")[1];
     console.log({ from }, { to }, { date });
